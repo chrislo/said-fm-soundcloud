@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="css/sc-player-standard.css" type="text/css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+    <script type="text/javascript" src="js/soundcloud.player.api.js"></script>
+    <script type="text/javascript" src="js/sc-player.js"></script>
+
+    <script>
+      $(document).bind('onMediaTimeUpdate.scPlayer', function(event){
+      console.log(event.target, 'the track is at ' + event.position + ' out of ' + event.duration + ' which is ' + event.relative + ' of the total');
+      });
+    </script>
+  </head>
+  <body>
+    <a href="http://soundcloud.com/saidfm/bollywood-nostalgia" class="sc-player">My new dub track</a>
+  </body>
+</html>
